@@ -1,0 +1,43 @@
+RewriteEngine On
+
+#---------------- View -----------------
+
+#Global
+RewriteRule ^home$ index.php
+RewriteRule ^admin$ admin.php
+RewriteRule ^login$ login.php
+RewriteRule ^logout$ logout.php
+
+#Realisation-service
+RewriteRule ^listeRealisation$ view/pages/admin/serviceRea/liste.php
+RewriteRule ^corbeilleRealisation$ view/pages/admin/serviceRea/corbeille.php
+#Client
+RewriteRule ^listeClient$ view/pages/admin/client/liste.php
+#Contact
+RewriteRule ^listeContact$ view/pages/admin/contact/liste.php
+#faq
+RewriteRule ^listeFaq$ view/pages/admin/faq/liste.php
+RewriteRule ^corbeilleFaq$ view/pages/admin/faq/corbeille.php
+#Profil
+RewriteRule ^listeProfil$ view/pages/admin/profil/liste.php
+#User
+RewriteRule ^listeUser$ view/pages/admin/user/liste.php
+RewriteRule ^corbeilleUser$ view/pages/admin/user/corbeille.php
+
+#---------------- Controller -----------------
+RewriteRule ^userMainController$ controller/user/UserMainController.php
+RewriteRule ^clientMainController$ controller/client/ClientMainController.php
+RewriteRule ^contactMainController$ controller/contact/ContactMainController.php
+RewriteRule ^faqMainController$ controller/faq/FaqMainController.php
+RewriteRule ^newsletterMainController$ controller/newsletter/NewsletterMainController.php
+RewriteRule ^serviceReaMainController$ controller/serviceRea/ServiceReaMainController.php
+
+
+#---------------- Model -----------------
+RewriteRule ^userRepo$ model/UserRepository.php
+RewriteRule ^clientRepo$ model/ClientRepository.php
+RewriteRule ^contactRepo$ model/ContactRepository.php
+RewriteRule ^faqRepo$ model/FaqRepository.php
+RewriteRule ^newsletterRepo$ model/NewsletterRepository.php
+RewriteRule ^serviceReaRepo$ model/ServiceReaRepository.php
+
